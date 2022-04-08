@@ -1,5 +1,4 @@
 {
-  "_format": "hh-sol-artifact-1",
   "contractName": "TokenERC1155",
   "sourceName": "contracts/ERC1155Mintable.sol",
   "abi": [

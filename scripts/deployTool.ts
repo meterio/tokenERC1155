@@ -27,6 +27,18 @@ export function compileSetting(version: string, runs: number) {
         enabled: true,
         runs: runs,
       },
+      outputSelection: {
+        "*": {
+          "*": [
+            "metadata",
+            "evm.bytecode", // Enable the metadata and bytecode outputs of every single contract.
+            "evm.bytecode.sourceMap", // Enable the source map output of every single contract.
+          ],
+          "": [
+            "ast", // Enable the AST output of every single file.
+          ],
+        },
+      },
     },
   };
 }
