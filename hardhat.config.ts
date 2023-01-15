@@ -127,7 +127,7 @@ task("setroot", "set root")
       const signers = await ethers.getSigners();
 
       let jsonArr = JSON.parse(readFileSync(json).toString());
-      let hashArr = [];
+      let hashArr:any[] = [];
       for (let i = 0; i < jsonArr.length; i++) {
         hashArr[i] = utils.defaultAbiCoder.encode(["uint256", "uint256", "address"], [BN(jsonArr[i].id), BN(jsonArr[i].amount), jsonArr[i].address]);
       }
@@ -157,7 +157,7 @@ task("getproof", "get proof")
       const signers = await ethers.getSigners();
 
       let jsonArr = JSON.parse(readFileSync(json).toString());
-      let hashArr = [];
+      let hashArr:any[] = [];
       let index: number;
       for (let i = 0; i < jsonArr.length; i++) {
         if (jsonArr[i].address == address) {
