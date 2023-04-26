@@ -158,7 +158,7 @@ task("getproof", "get proof")
 
       let jsonArr = JSON.parse(readFileSync(json).toString());
       let hashArr:any[] = [];
-      let index: number;
+      let index: number = 0;
       for (let i = 0; i < jsonArr.length; i++) {
         if (jsonArr[i].address == address) {
           index = i;

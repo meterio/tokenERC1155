@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Supply.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
-contract TokenERC1155 is AccessControl, ERC1155Supply {
+contract TokenERC1155SBT is AccessControl, ERC1155Supply {
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     string public baseMetadataURI;
     mapping(bytes32 => bool) public roots;
@@ -100,7 +100,7 @@ contract TokenERC1155 is AccessControl, ERC1155Supply {
     function setApprovalForAll(
         address operator,
         bool approved
-    ) public virtual override {
+    ) public override {
         revert("SBT!");
     }
 
